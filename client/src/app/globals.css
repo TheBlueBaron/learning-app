@@ -148,7 +148,7 @@ input[type="color"] {
 }
 
 .search__title {
-  @apply font-normal text-2xl mt-14 text-white-100;
+  @apply font-normal text-2xl mt-14 text-white-50;
 }
 
 .search__subtitle {
@@ -160,7 +160,7 @@ input[type="color"] {
 }
 
 .search__courses-grid {
-  @apply basis-3/5 grid grid-cols-1 xl:grid-cols-2 gap-6 auto-rows-fr text-white-100;
+  @apply basis-3/5 grid grid-cols-1 xl:grid-cols-2 gap-6 auto-rows-fr text-white-50;
 }
 
 .search__selected-course {
