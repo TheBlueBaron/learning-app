@@ -144,11 +144,11 @@ input[type="color"] {
 
 /* Search Page */
 .search {
-  @apply flex flex-col bg-background text-foreground h-full mx-auto w-3/4;
+  @apply flex flex-col text-foreground h-full mx-auto w-3/4;
 }
 
 .search__title {
-  @apply font-normal text-2xl mt-14;
+  @apply font-normal text-2xl mt-14 text-white-100;
 }
 
 .search__subtitle {
@@ -160,7 +160,7 @@ input[type="color"] {
 }
 
 .search__courses-grid {
-  @apply basis-3/5 grid grid-cols-1 xl:grid-cols-2 gap-6 auto-rows-fr;
+  @apply basis-3/5 grid grid-cols-1 xl:grid-cols-2 gap-6 auto-rows-fr text-white-100;
 }
 
 .search__selected-course {
@@ -1101,7 +1101,7 @@ input[type="color"] {
 
 /* Loading */
 .loading {
-  @apply fixed inset-0 flex gap-2 items-center justify-center bg-background/50;
+  @apply fixed inset-0 flex gap-2 items-center justify-center;
 }
 
 .loading__spinner {

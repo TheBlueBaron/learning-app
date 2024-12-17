@@ -8,30 +8,30 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
 
-// Convert cents to formatted currency string (e.g., 4999 -> "$49.99")
-export function formatPrice(cents: number | undefined): string {
-  return new Intl.NumberFormat("en-US", {
+// Convert pence to formatted currency string (e.g., 4999 -> "£49.99")
+export function formatPrice(pence: number | undefined): string {
+  return new Intl.NumberFormat("en-GB", {
     style: "currency",
-    currency: "USD",
-  }).format((cents || 0) / 100);
+    currency: "GBP",
+  }).format((pence || 0) / 100);
 }
 
-// Convert dollars to cents (e.g., "49.99" -> 4999)
-export function dollarsToCents(dollars: string | number): number {
-  const amount = typeof dollars === "string" ? parseFloat(dollars) : dollars;
+// Convert pounds to pence (e.g., "49.99" -> 4999)
+export function poundsToPence(pounds: string | number): number {
+  const amount = typeof pounds === "string" ? parseFloat(pounds) : pounds;
   return Math.round(amount * 100);
 }
 
-// Convert cents to dollars (e.g., 4999 -> "49.99")
-export function centsToDollars(cents: number | undefined): string {
-  return ((cents || 0) / 100).toString();
+// Convert pence to pounds (e.g., 4999 -> "49.99")
+export function penceToPounds(pence: number | undefined): string {
+  return ((pence || 0) / 100).toString();
 }
 
-// Zod schema for price input (converts dollar input to cents)
+// Zod schema for price input (converts pound input to pence)
 export const priceSchema = z.string().transform((val) => {
-  const dollars = parseFloat(val);
-  if (isNaN(dollars)) return "0";
-  return dollarsToCents(dollars).toString();
+  const pounds = parseFloat(val);
+  if (isNaN(pounds)) return "0";
+  return poundsToPence(pounds).toString();
 });
 
 export const countries = [
