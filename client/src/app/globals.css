@@ -219,7 +219,7 @@ input[type="color"] {
 
 /* Completion Page */
 .completion {
-  @apply flex flex-col h-full items-center justify-center bg-background text-foreground;
+  @apply flex flex-col h-full items-center justify-center bg-customgreys-primarybg text-foreground;
 }
 
 .completion__content {
@@ -231,11 +231,15 @@ input[type="color"] {
 }
 
 .completion__title {
-  @apply text-4xl font-bold mb-3;
+  @apply text-4xl font-bold mb-3 text-white-50;
 }
 
 .completion__message {
-  @apply mb-1;
+  @apply mb-1 text-white-50;
+}
+
+.completion__support {
+  @apply mb-1 text-white-50;
 }
 
 .completion__action {
